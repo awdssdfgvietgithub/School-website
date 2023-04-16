@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <style>
+    body, html {
+        height: 100%;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .bg-img {
+        background-image: url("./hinh anh/tp-hcm.jpg");
+        min-height: 380px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+    
+    .container {
+		border-radius:10px; 
+		width:350px; float:right; 
+		margin-right:30px; 
+		margin-top:30px; 
+		padding-bottom:15px; 
+		background-color:#FFF;
+		box-shadow:5px 5px 1px 1px blue;
+    }
+    
+    .btn {
+		width:308px; 
+		height:30px; 
+		margin-left:22px; 
+		margin-top:20px; 	
+		background-color:#06F; 
+		border:none; 
+		color:white;
+    }
+    
+    .btn:hover {
+      background-color:blue;
+	border:none;
+    }
+		
+	h3 {
+	margin-top:0;
+	color:blue;
+	text-align:center;
+	}
+	input[type="text"] {
+	
+	  background-color:#0FF;
+	  width:300px; 
+	  height:35px; 
+	  margin-left:21px;
+	  border:white;
+	  padding-left:10px;
+	}
+	input[type="password"] {
+	
+	  background-color:#0FF;
+	  width:300px; 
+	  height:35px; 
+	  margin-left:21px;
+	  border:white;
+	  padding-left:10px;
+	}
+    </style>
+    <script>
+        function KiemTra(){
+            var email = document.getElementById("account").value.trim();
+			var password = document.getElementById("password").value.trim();
+			//account
+			if(email == "")
+			{
+				document.getElementById("accountError").innerHTML = "Vui lòng nhập email !";
+				return false;	
+			}
+			else if(email.length < 10)
+			{
+				document.getElementById("accountError").innerHTML = "Kiểm tra lại email phải có 10 ký tự !";
+				return false;	
+			}
+			else if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email) == false)
+			{
+				document.getElementById("accountError").innerHTML = "Kiểm tra lại format của email !";
+				return false;	
+			}
+			else
+			{
+				document.getElementById("accountError").innerHTML = "";
+				sessionStorage.setItem("AC", document.forms["TDN"]["account"].value);		
+			}
+			//password
+			if(password == "")
+			{
+				document.getElementById("passwordError").innerHTML = "Vui lòng nhập password !";
+				return false;		
+			}
+			else if(password.length < 10)
+			{
+				document.getElementById("passwordError").innerHTML = "Kiểm tra lại Password phải có 10 ký tự !";
+				return false;		
+			}
+			else
+			{
+				document.getElementById("passwordError").innerHTML = "";
+				sessionStorage.setItem("PW", document.forms["TDN"]["password"].value);
+				return true;
+			}
+        }
+    </script>
+</head>
+<body class="bg-img">
+<a href="DangNhap.html"><img src="./hinh anh/Viet-Thinh.png" style="padding:10px"></a>
+   <form name="TDN" method="post" class="container">
+        <!--Logo and Heading-->
+		<img src="hinh anh/logo.png" width="100%" height="150px" />
+    	<h3>ĐĂNG NHẬP HỆ THỐNG</h3>
+      	<!--Email-->
+    	<label for="account" style="margin-left:22px"><b>Email<b></label>
+    	<input name="account" id="account" type="text" required placeholder="Nhập email" />
+    	<span id="accountError" style="font-size:15px; margin-left:21px; font-weight:100; color:red;"></span><br />
+      	<!--Password-->
+    	<label for="password" style="margin-left:22px;"><b>Password<b></label>
+    	<input name="password" id="password" type="password" required placeholder="Nhập password" />
+   		<span id="passwordError" style="font-size:15px; margin-left:21px; font-weight:100; color:red;"></span><br />
+      	<!--Button-->
+      	<a href="baocao.html"><input name="button" id="button" type="button" value="Đăng nhập" align="middle" class="btn" onclick="return KiemTra()" style="height:35px;" /></a>
+    </form>

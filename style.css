@@ -1,0 +1,314 @@
+body{
+	background-color: rgb(230, 230, 230);
+	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+header{
+	font-size: 16px;
+}
+.container{
+	max-width: 1200px;
+	margin: 0px auto;
+}
+.logo-ten{
+	display: flex;
+	padding: 0 20px;
+	background-color: #fff;
+}
+.logo-ten img{
+	float: left;
+	padding: 10px;
+	max-width: 400px;
+}
+.logo-ten h2{
+	padding: 30px;
+	font-size: 24px;
+	color: rgb(0, 60, 200);
+	font-weight: bold;
+	padding-bottom: 0;
+}
+.logo-ten h1{
+	font-size: 26px;
+	color: red;
+	font-weight: bold;
+}
+.nen{
+	background-color: rgb(0, 60, 200);
+}
+nav{
+	display: flex; /* logo và menu trên 1 hàng */
+	justify-content: space-between;  /* tạo khoảng trống giữa logo và menu */
+	justify-items: center;
+}
+#logo{
+	padding: 10px 0px;
+}
+#logo img{
+	max-width: 50px;
+	height: auto;
+}
+
+.main-menu{
+	display: flex;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	z-index: 1;
+}
+.main-menu li{
+	position: relative;
+}
+
+.main-menu li a{
+	color: #fff;
+	display: block;
+	padding: 30px 20px;
+	text-decoration: none;
+	line-height: 15px;
+}
+
+.main-menu ul.sub-menu{
+	position: absolute;
+	background-color: rgb(0, 60, 200);
+	padding: 15px 0px;
+	width: 200px;
+	list-style: none;
+	display: none;
+	border: 1px solid #fff;
+}
+.main-menu li:hover >a{
+	background-color: #fff;
+	color: rgb(0, 60, 200);
+	border: 1px solid rgb(0, 60, 200);
+}
+
+.main-menu li:hover>ul.sub-menu{
+	display: block;
+	padding: 0;
+}
+.main-menu ul.sub-menu a{
+	padding: 8px 10px;
+	border-bottom: 1px solid #fff;
+	left:0;
+}
+.main-menu ul.sub-menu li:hover>a{
+	background-color: #fff;
+	color: rgb(0, 60, 200);
+}
+.main-menu ul.sub-menu li:last-child a{
+	border: none;
+}
+
+.main-menu ul.sub-menu ul.sub-menu{
+	left: 200px;
+	top: 0;
+}
+.content{
+	padding: 10px;
+}
+.tintuc-thongbao{
+	padding: 10px 0px;
+}
+.tintuc-thongbao h2{
+	font-weight: bold;
+}
+.tintuc{
+	color:  rgb(0, 60, 200);
+	padding: 20px;
+	background-color: #fff;
+}
+.tintuc a{
+	color: black;
+}
+.tin-chinh{
+	text-align: justify;
+	color: black;
+}
+
+.tin-chinh img{
+	width: 100%;
+}
+.tintuc img:hover{
+	transform:scale(1.05);
+	transition: all 0.2s linear;
+}
+.tin-chinh h3{
+	padding: 10px 0px;
+}
+.tin-nho{
+	padding: 8px;
+	text-align: justify;
+	color: black;
+	display: flex;
+	border-bottom: 1px solid rgb(230, 230, 230);
+}
+.tin-nho img{
+	max-height: 70px;
+}
+.tin-nho h3{
+	font-size: 14px;
+	padding: 0px 5px;
+}
+
+.thongbao{
+	color:  rgb(0, 60, 200);
+	padding: 20px;
+	background-color: #fff;
+}
+
+.thongbao h3{
+	font-size: 14px;
+	padding: 10px;
+	text-align: justify;
+	border-bottom: 1px solid rgb(230, 230, 230);
+}
+.thongbao a{
+	color: black;
+}
+.thongbao p{
+	font-size: 10px;
+	text-align: justify;
+}
+
+
+.noibat{
+	padding: 10px;
+	background-color:  #fff;
+}
+.noibat .card{
+	background-color: rgb(230, 230, 230);
+}
+.noibat h2{
+	color:  rgb(0, 60, 200);
+	padding: 10px;
+	font-weight: bold;
+	text-align: center;
+}
+.noibat h3{
+	padding: 20px;
+	text-align: justify;
+}
+.noibat img:hover{
+	transform:scale(1.1);
+	transition: all 0.2s linear;
+}
+.footer{
+	display: flex;
+}
+footer p{
+	color: #fff;
+}
+.footer th{
+	padding: 0 15px;
+}
+.thongtin{
+	color: #fff;
+	font-size: 14px;
+	padding: 15px;
+	float: left;
+	text-align: justify;
+}
+
+.map {
+    float: right;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 10px 0px 3px 10px;
+}
+
+.button{
+	z-index: 2;
+}
+.button1 {
+	background-color: rgb(0, 60, 200);
+	color: #fff;
+	width: 100px;
+	height: 60px;
+	border-radius: 3px;
+	cursor: pointer;
+	position:fixed;
+	top: 250px;
+	right: 5%;
+  }
+  .button1 p{
+	font-size: 20px;
+	text-align: center;
+  }
+  .button1:hover {
+	background-color: #fff;
+	color: rgb(0, 60, 200);
+	border: 2px solid rgb(0, 60, 200);
+	
+  }
+
+  .button2 {
+	background-color: rgb(0, 60, 200);
+	color: #fff;
+	width: 100px;
+	height: 30px;
+	border-radius: 3px;
+	cursor: pointer;
+	position:fixed;
+	top: 250px;
+	left: 5%;
+  }
+  .button2 p{
+	font-size: 20px;
+	text-align: center;
+  }
+  .button2:hover {
+	background-color: #fff;
+	color: rgb(0, 60, 200);
+	border: 2px solid rgb(0, 60, 200);
+  }
+  
+  
+  .button3 {
+	background-color: rgb(0, 60, 200);
+	color: #fff;
+	width: 100px;
+	height: 30px;
+	border-radius: 3px;
+	cursor: pointer;
+	position:fixed;
+	top: 290px;
+	left: 5%;
+  }
+  .button3 p{
+	font-size: 20px;
+	text-align: center;
+  }
+  .button3:hover {
+	background-color: #fff;
+	color: rgb(0, 60, 200);
+	border: 2px solid rgb(0, 60, 200);
+  }
+  
+  .button4 {
+	background-color: rgb(0, 60, 200);
+	color: #fff;
+	width: 100px;
+	height: 60px;
+	border-radius: 3px;
+	cursor: pointer;
+	position:fixed;
+	top: 330px;
+	left: 5%;
+  }
+  .button4 p{
+	font-size: 20px;
+	text-align: center;
+  }
+  .button4:hover {
+	background-color: #fff;
+	color: rgb(0, 60, 200);
+	border: 2px solid rgb(0, 60, 200);
+  }
+  
+  
+  svg {
+	width: calc(22px * 3);
+	height: calc(20px * 3);
+}
+
+ 
